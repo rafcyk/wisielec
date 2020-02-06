@@ -1,194 +1,278 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
 }
 
 /* --------------------START SCREEN-----------   */
-body{
-    background-image: repeating-linear-gradient(0deg, #80DFFF, #80DFFF 1px, transparent 1px, transparent 15px), repeating-linear-gradient(90deg, #80DFFF, #80DFFF 1px, transparent 1px, transparent 15px);
-    text-align: center;
+body {
+  background-image: repeating-linear-gradient(
+      0deg,
+      #80dfff,
+      #80dfff 1px,
+      transparent 1px,
+      transparent 15px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #80dfff,
+      #80dfff 1px,
+      transparent 1px,
+      transparent 15px
+    );
+  text-align: center;
 }
 
-body h1{
-    margin:10px auto 0 auto;
-    font-size: 4rem;
-    padding: 5px 15px;
-    background-color: #fff;
-    border:2px solid black;
-    border-radius: 10px;
-    width:300px;
+body h1 {
+  margin: 10px auto 0 auto;
+  font-size: 4rem;
+  padding: 5px 15px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
 }
 
-
-div.wrapMain{
-    position: absolute;
-    top:50%;
-    left:50%;
-    width:400px;
-    height: 400px;
-    transform: translate(-50%,-50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+div.wrapMain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 div.wrapMain div.single,
-div.wrapMain div.multi
-{
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:2px solid black;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #fff;
+div.wrapMain div.multi {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
 }
 
-
 div.wrapMain div.single p,
-div.wrapMain div.multi p{
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+div.wrapMain div.multi p {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
 }
 
 div.wrapMain div.single button.onePerson,
-div.wrapMain div.multi button.twoPeople{
-    font-size: 3rem;
-    border:1px solid black;
-    border-radius: 5px;
-    padding:10px 25px;
-    text-transform: capitalize;
-    background-color: #fff;
-    cursor: pointer;
+div.wrapMain div.multi button.twoPeople {
+  font-size: 3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+  background-color: #fff;
+  cursor: pointer;
 }
-
-
 
 /* ---------Image styles---------------- */
 
-div.mainImg{
-    position: absolute;
-    bottom:5%;
-    left:5%;
+div.mainImg {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
 }
 
-div.mainImg img{
-    width:400px;
-    height: 500px;
+div.mainImg img {
+  width: 400px;
+  height: 500px;
 }
-
 
 /* --------------main container to game------------- */
 
-div.game{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100vh;
-    background-color: #fff;
-    background-image: repeating-linear-gradient(0deg, #80DFFF, #80DFFF 1px, transparent 1px, transparent 15px), repeating-linear-gradient(90deg, #80DFFF, #80DFFF 1px, transparent 1px, transparent 15px);
+div.game {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+      0deg,
+      #80dfff,
+      #80dfff 1px,
+      transparent 1px,
+      transparent 15px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #80dfff,
+      #80dfff 1px,
+      transparent 1px,
+      transparent 15px
+    );
 }
 
-div.game div.rules{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:600px;
-    height: 300px;
-    background-color: #fff;
-    border:2px solid black;
-    border-radius: 10px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+div.game div.rules {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
-div.game div.rules p.textRules{
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+div.game div.rules p.textRules {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
-div.game div.rules button.startGame{
-    font-size: 3rem;
-    border:1px solid black;
-    border-radius: 5px;
-    padding:10px 25px;
-    text-transform: capitalize;
-    background-color: #fff;
-    cursor: pointer;
+div.game div.rules button.startGame {
+  font-size: 3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+  background-color: #fff;
+  cursor: pointer;
 }
 
-div.game div.addWord{
-    position: absolute;
-    top:5%;
-    left:50%;
-    transform: translateX(-50%);
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+div.game div.addWord {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-div.game div.addWord input{
-    width:600px;
-    height: 60px;
-    font-size: 2.5rem;
-    padding: 5px;
-    border:2px solid black;
-    border-radius: 10px;
+div.game div.addWord input {
+  width: 600px;
+  height: 60px;
+  font-size: 2.5rem;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
-div.game div.addWord button.play{
-    margin-top: 30px;
-    font-size: 3rem;
-    border:1px solid black;
-    border-radius: 5px;
-    padding:10px 25px;
-    text-transform: capitalize;
-    background-color: #fff;
-    cursor: pointer;
+div.game div.addWord button.play {
+  margin-top: 30px;
+  font-size: 3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+  background-color: #fff;
+  cursor: pointer;
 }
 
-div.game div.wrapWord{
-    position: absolute;
-    width: 600px;
-    top:5%;
-    left:50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
+div.game div.wrapWord {
+  position: absolute;
+  width: 600px;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
 }
 
-div.game div.wrapWord div.wrapLetter{
-    width:30px;
-    display: flex;
-    flex-direction: column;
+div.game div.wrapWord div.wrapLetter {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
 }
 
-div.game div.wrapWord div.wrapLetter span.letter{
-    font-size:2rem;
+div.game div.wrapWord div.wrapLetter span.letter {
+  font-size: 2rem;
 }
 
-div.game div.wrapWord div.wrapLetter span.line{
-    width: 100%;
-    height: 3px;
-    background-color: #000;
+div.game div.wrapWord div.wrapLetter span.line {
+  width: 100%;
+  height: 3px;
+  background-color: #000;
 }
 
+div.game div.wrapChars {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: space-around;
+  padding: 50px 100px;
+}
 
+div.game div.wrapChars div.wrapChar {
+  width: calc(500px / 8);
+  height: calc(300px / 8);
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2.5rem;
+}
 
+div.game div.winScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  /* border: 2px solid white; */
+  border-radius: 15px;
+  color: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
 
+div.game div.winScreen button.startGame {
+  margin-top: 20px;
+  font-size: 3rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+  background-color: #fff;
+  cursor: pointer;
+}
 
+div.game img {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}

@@ -3,48 +3,16 @@ const btnMulti = document.querySelector(".wrapMain .multi button.twoPeople");
 let lettersToEnd = 0;
 let faultCount = 0;
 const faultsNumber = 5;
-const chars = [
-  "a",
-  "ą",
-  "b",
-  "c",
-  "ć",
-  "d",
-  "e",
-  "ę",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "ł",
-  "m",
-  "n",
-  "ń",
-  "o",
-  "ó",
-  "p",
-  "r",
-  "s",
-  "ś",
-  "t",
-  "u",
-  "w",
-  "x",
-  "y",
-  "z",
-  "ź",
-  "ż"
-];
+const chars = ["a","ą","b", "c","ć","d","e","ę","f","g","h","i","j","k", "l","ł","m","n","ń","o","ó","p","r", "s","ś","t", "u", "w","x","y","z","ź","ż"];
 
 let wordArray = [];
 let spanLetters = [];
 let spanChars = [];
+let spanOneLetter = [];
 
 const makeGame = () => {
   lettersToEnd = 0;
+  faultCount = 0;
 
   const divGame = document.createElement("div");
   divGame.className = "game";
@@ -75,6 +43,7 @@ const makeGame = () => {
   const playGame = () => {
     lettersToEnd = 0;
     spanLetters = [];
+    faultCount = 0;
     while (divGame.firstChild) divGame.removeChild(divGame.firstChild);
 
     divGame.appendChild(imgExit);
@@ -95,17 +64,28 @@ const makeGame = () => {
     divAddWord.appendChild(btnPlay);
 
     const addWord = () => {
-      if (inputWord.value) {
+      const word = inputWord.value.toLowerCase();
+      wordArray = [...word];
+
+
+      if (inputWord.value && !wordArray.includes("1") && !wordArray.includes("!") && !wordArray.includes("2") && !wordArray.includes("@") && !wordArray.includes("3") && !wordArray.includes("#") && !wordArray.includes("4") && !wordArray.includes("$") && !wordArray.includes("5") && !wordArray.includes("%") && !wordArray.includes("6") && !wordArray.includes("^") && !wordArray.includes("7") && !wordArray.includes("&") && !wordArray.includes("8") && !wordArray.includes("*") && !wordArray.includes("9") && !wordArray.includes("(") && !wordArray.includes("0") && !wordArray.includes(")") && !wordArray.includes("-") && !wordArray.includes("_") && !wordArray.includes("+") && !wordArray.includes("=") && !wordArray.includes('""') && !wordArray.includes("|") && !wordArray.includes("{") && !wordArray.includes("}") && !wordArray.includes("[") && !wordArray.includes("]") && !wordArray.includes(":") && !wordArray.includes(";") && !wordArray.includes('"') && !wordArray.includes("'") && !wordArray.includes(",") && !wordArray.includes("<") && !wordArray.includes(".") && !wordArray.includes(">") && !wordArray.includes("/") && !wordArray.includes("?")) {
         while (divGame.firstChild) divGame.removeChild(divGame.firstChild);
 
         divGame.appendChild(imgExit);
 
+        const divWrapDead = document.createElement('div');
+        divWrapDead.className = 'wrapDead';
+        divGame.appendChild(divWrapDead);
+
+        const imgGallows = document.createElement('img');
+        imgGallows.className = 'gallows';
+        imgGallows.src = 'szubienica.png';
+
+        divWrapDead.appendChild(imgGallows);
+
         const divWrapWord = document.createElement("div");
         divWrapWord.className = "wrapWord";
         divGame.appendChild(divWrapWord);
-
-        const word = inputWord.value.toLowerCase();
-        wordArray = [...word];
 
         for (let i = 0; i < wordArray.length; i++) {
           if (wordArray[i] !== " ") {
@@ -137,7 +117,6 @@ const makeGame = () => {
             spanLetter.style.opacity = 0;
 
             divWrapLetter.appendChild(spanLetter);
-            // divWrapLetter.appendChild(spanLine);
           }
         }
 
@@ -151,18 +130,27 @@ const makeGame = () => {
           divWrapChar.textContent = chars[i];
           divWrapChars.appendChild(divWrapChar);
 
-          // const spanChar = document.createElement('span');
-          // spanChar.className = 'char';
-          // spanChar.textContent = chars[i];
-          // divWrapChar.appendChild(spanChar);
-
           spanChars.push(divWrapChar);
         }
+
+
+         
+        for(let i = 0; i < spanLetters.length; i++){
+          spanOneLetter.push(spanLetters[i].textContent);
+        }
+
 
         spanChars.forEach(char => {
           char.addEventListener("click", () => {
             char.style.pointerEvents = "none";
             char.style.opacity = 0.3;
+
+
+            
+
+              if(!spanOneLetter.includes(char.textContent)){
+                faultCount++;
+              }
 
             for (let i = 0; i < spanLetters.length; i++) {
               if (spanLetters[i].textContent === char.textContent) {
@@ -172,6 +160,58 @@ const makeGame = () => {
                 lettersToEnd++;
               }
             }
+
+
+            switch (faultCount) {
+              case 1:
+                const divHead = document.createElement("div");
+                divHead.className = "head";
+                divWrapDead.appendChild(divHead);
+                break;
+
+              case 2:
+                const divBody = document.createElement("div");
+                divBody.className = "body";
+                divWrapDead.appendChild(divBody)
+                break;
+
+              case 3:
+                const divLeftHand = document.createElement("div");
+                divLeftHand.className = "leftHand";
+                divWrapDead.appendChild(divLeftHand);
+                break;
+
+              case 4:
+                const divRightHand = document.createElement("div");
+                divRightHand.className = "rightHand";
+                divWrapDead.appendChild(divRightHand);
+                break;
+
+              case 5:
+                const divLeftLeg = document.createElement("div");
+                divLeftLeg.className = "leftLeg";
+                divWrapDead.appendChild(divLeftLeg);
+                break;
+
+              case 6:
+                const divRightLeg = document.createElement("div");
+                divRightLeg.className = "rightLeg";
+                divWrapDead.appendChild(divRightLeg);
+
+                for (let i = 0; i < spanChars.length; i++) {
+                  spanChars[i].style.pointerEvents = "none";
+                }
+
+                const divLoose = document.createElement("div");
+              divLoose.className = "looseScreen";
+              divLoose.textContent = "Przegrałeś!";
+              divGame.appendChild(divLoose);
+              divLoose.appendChild(btnStartGame);
+
+
+                break;
+            }
+
             if (lettersToEnd == spanLetters.length) {
               console.log("wygrałes");
               const divWin = document.createElement("div");
@@ -186,7 +226,10 @@ const makeGame = () => {
             }
           });
         });
-      } else alert("Wpisz hasło!");
+      } else {
+        alert("Wpisz poprawnie hasło!");
+        inputWord.value = "";
+      }
     };
 
     btnPlay.addEventListener("click", addWord);

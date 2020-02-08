@@ -156,7 +156,6 @@ const makeGame = () => {
             for (let i = 0; i < spanLetters.length; i++) {
               if (spanLetters[i].textContent === char.textContent) {
                 spanLetters[i].style.opacity = 1;
-                console.log(lettersToEnd);
 
                 lettersToEnd++;
               }
@@ -220,7 +219,6 @@ const makeGame = () => {
             }
 
             if (lettersToEnd == spanLetters.length) {
-              console.log("wygrałes");
               const divWin = document.createElement("div");
               divWin.className = "winScreen";
               divWin.textContent = "Wygrałeś!";
@@ -326,7 +324,6 @@ const gameSingle = () => {
 
     const word = biology[Math.floor(Math.random() * biology.length)];
     wordArray = [...word];
-    console.log(word);
 
     const divWrapDead = document.createElement('div');
     divWrapDead.className = 'wrapDead';
@@ -410,7 +407,6 @@ const gameSingle = () => {
         for (let i = 0; i < spanLetters.length; i++) {
           if (spanLetters[i].textContent === char.textContent) {
             spanLetters[i].style.opacity = 1;
-            console.log(lettersToEnd);
 
             lettersToEnd++;
           }
@@ -476,7 +472,6 @@ const gameSingle = () => {
         }
 
         if (lettersToEnd == spanLetters.length) {
-          console.log("wygrałes");
           const divWin = document.createElement("div");
           divWin.className = "winScreen";
           divWin.textContent = "Wygrałeś!";
@@ -513,7 +508,6 @@ const gameSingle = () => {
 
     const word = music[Math.floor(Math.random() * music.length - 1)];
     wordArray = [...word];
-    console.log(word);
 
     const divWrapDead = document.createElement('div');
     divWrapDead.className = 'wrapDead';
@@ -597,7 +591,6 @@ const gameSingle = () => {
         for (let i = 0; i < spanLetters.length; i++) {
           if (spanLetters[i].textContent === char.textContent) {
             spanLetters[i].style.opacity = 1;
-            console.log(lettersToEnd);
 
             lettersToEnd++;
           }
@@ -663,7 +656,6 @@ const gameSingle = () => {
         }
 
         if (lettersToEnd == spanLetters.length) {
-          console.log("wygrałes");
           const divWin = document.createElement("div");
           divWin.className = "winScreen";
           divWin.textContent = "Wygrałeś!";
@@ -704,7 +696,6 @@ const gameSingle = () => {
 
     const word = sport[Math.floor(Math.random() * sport.length - 1)];
     wordArray = [...word];
-    console.log(word);
 
     const divWrapDead = document.createElement('div');
     divWrapDead.className = 'wrapDead';
@@ -788,7 +779,6 @@ const gameSingle = () => {
         for (let i = 0; i < spanLetters.length; i++) {
           if (spanLetters[i].textContent === char.textContent) {
             spanLetters[i].style.opacity = 1;
-            console.log(lettersToEnd);
 
             lettersToEnd++;
           }
@@ -854,7 +844,6 @@ const gameSingle = () => {
         }
 
         if (lettersToEnd == spanLetters.length) {
-          console.log("wygrałes");
           const divWin = document.createElement("div");
           divWin.className = "winScreen";
           divWin.textContent = "Wygrałeś!";

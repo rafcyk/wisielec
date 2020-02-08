@@ -16,14 +16,14 @@ body {
       #80dfff,
       #80dfff 1px,
       transparent 1px,
-      transparent 15px
+      transparent 20px
     ),
     repeating-linear-gradient(
       90deg,
       #80dfff,
       #80dfff 1px,
       transparent 1px,
-      transparent 15px
+      transparent 20px
     );
   text-align: center;
 }
@@ -189,7 +189,6 @@ div.game div.wrapWord {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  /* justify-content: space-between; */
   justify-content: center;
   align-items: center;
 }
@@ -483,7 +482,7 @@ div.gameSingle div.wrapChars {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: space-around;
-  padding: 50px 100px;
+  padding: 50px 50px;
 }
 
 div.gameSingle div.wrapChars div.wrapChar {
@@ -496,6 +495,7 @@ div.gameSingle div.wrapChars div.wrapChar {
   align-items: center;
   cursor: pointer;
   font-size: 2.5rem;
+  margin:5px;
 }
 
 div.gameSingle div.winScreen,
@@ -612,3 +612,770 @@ div.gameSingle div.wrapDead div.rightLeg {
   transform-origin: top;
 }
 
+
+/* ---------------------MEDIA QUERIES----------------------- */
+
+@media only screen and (max-width:1450px){
+  div.gameSingle div.wrapChars {
+    width: 500px;
+    height: 300px;
+    padding: 20px 20px;
+  }
+  
+  div.gameSingle div.wrapChars div.wrapChar {
+    width: calc(400px / 8);
+    height: calc(300px / 8);
+    margin:5px;
+  }
+
+  div.game div.wrapChars {
+    width: 500px;
+    height: 300px;
+    padding: 50px 50px;
+  }
+  
+  div.game div.wrapChars div.wrapChar {
+    width: calc(400px / 8);
+    height: calc(300px / 8);
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width:1300px){
+  div.gameSingle div.wrapDead {
+    width: 200px;
+    height: 350px;
+  }
+
+  div.gameSingle div.wrapDead img{
+    width:150px;
+    height: 300px;
+  }
+  
+  div.gameSingle div.wrapDead div.head {
+    top: 120px;
+    left: 115px;
+  }
+  
+  div.gameSingle div.wrapDead div.body {
+    top: 168px;
+    left: 137px;
+    height: 60px;
+  }
+  
+  div.gameSingle div.wrapDead div.leftHand {
+    width: 5px;
+    height: 50px;
+    top: 190px;
+    left: 137px;
+  }
+  
+  div.gameSingle div.wrapDead div.rightHand {
+    width: 5px;
+    height: 50px;
+    top: 190px;
+    left: 137px;
+  }
+  
+  div.gameSingle div.wrapDead div.leftLeg {
+    height: 50px;
+    top: 225px;
+    left: 137px;
+  }
+  
+  div.gameSingle div.wrapDead div.rightLeg {
+    height: 50px;
+    top: 225px;
+    left: 137px;
+  }
+
+  div.game div.wrapDead {
+    width: 200px;
+    height: 350px;
+  }
+
+  div.game div.wrapDead img{
+    width:150px;
+    height: 300px;
+  }
+  
+  div.game div.wrapDead div.head {
+    top: 120px;
+    left: 115px;
+  }
+  
+  div.game div.wrapDead div.body {
+    top: 168px;
+    left: 137px;
+    height: 60px;
+  }
+  
+  div.game div.wrapDead div.leftHand {
+    width: 5px;
+    height: 50px;
+    top: 190px;
+    left: 137px;
+  }
+  
+  div.game div.wrapDead div.rightHand {
+    width: 5px;
+    height: 50px;
+    top: 190px;
+    left: 137px;
+  }
+  
+  div.game div.wrapDead div.leftLeg {
+    height: 50px;
+    top: 225px;
+    left: 137px;
+  }
+  
+  div.game div.wrapDead div.rightLeg {
+    height: 50px;
+    top: 225px;
+    left: 137px;
+  }
+}
+
+
+@media only screen and (max-width:1150px){
+  html{
+    font-size: 9px;
+  }
+
+  div.gameSingle div.wrapChars {
+    left:30%;
+  }
+
+  div.game div.wrapChars {
+    left:30%;
+  }
+}
+
+
+@media only screen and (max-width:1000px){
+  html{
+    font-size: 8px;
+  }
+
+  div.gameSingle div.wrapChars {
+    left:30%;
+    padding: 20px;
+  }
+
+  div.game div.wrapChars {
+    left:30%;
+    padding: 20px;
+  }
+
+
+}
+
+@media only screen and (max-width:950px){
+  div.mainImg{
+    z-index: -1;
+  }
+
+  div.gameSingle div.wrapDead {
+    right: 10%;
+  }
+
+  div.game div.wrapDead {
+    right: 10%;
+  }
+}
+
+@media only screen and (max-width:850px){
+  div.gameSingle div.wrapWord div.wrapLetter span.line {
+    height: 2px;
+  }
+
+  div.game div.wrapWord div.wrapLetter span.line {
+    height: 2px;
+  }
+
+  div.gameSingle div.wrapChars {
+    width: 300px;
+    height: 400px;
+    padding: 20px 20px;
+  }
+  
+  div.gameSingle div.wrapChars div.wrapChar {
+    width: calc(200px / 8);
+    height: calc(300px / 8);
+    margin:5px;
+  }
+
+  div.game div.wrapChars {
+    width: 300px;
+    height: 400px;
+    padding: 20px 20px;
+  }
+  
+  div.game div.wrapChars div.wrapChar {
+    width: calc(200px / 8);
+    height: calc(300px / 8);
+    margin:5px;
+  }
+
+  div.gameSingle img {
+    width: 40px;
+    height: 40px;
+    top: 2%;
+    right: 2%;
+  }
+
+  div.game img {
+    width: 40px;
+    height: 40px;
+    top: 2%;
+    right: 2%;
+  }
+}
+
+@media only screen and (max-width:700px){
+  html{
+    font-size: 8px;
+  }
+
+  div.mainImg{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  div.mainImg img{
+      width:250px;
+      height: 400px;
+  }
+
+  div.gameSingle div.wrapCategory{
+    width:300px;
+    height: 400px;
+  }
+  
+  
+  div.gameSingle div.wrapCategory button{
+    width:150px;
+    height: 60px;
+    margin-top: 40px;
+  }
+
+  div.gameSingle div.wrapWord {
+    width: 350px;
+    top: 10%;
+    transform: translateX(-50%);
+  }
+
+  div.gameSingle div.wrapChars {
+    width: 200px;
+    height: 300px;
+    padding: 20px 20px;
+  }
+  
+  div.gameSingle div.wrapChars div.wrapChar {
+    width: calc(100px / 8);
+    height: calc(200px / 8);
+    margin:3px;
+    padding: 10px;
+  }
+
+  div.gameSingle div.wrapDead {
+    width: 100px;
+    height: 250px;
+  }
+
+  div.gameSingle div.wrapDead img{
+    width:90px;
+    height: 240px;
+  }
+  
+  div.gameSingle div.wrapDead div.head {
+    width:30px;
+    height: 30px;
+    top: 90px;
+    left: 52px;
+  }
+  
+  div.gameSingle div.wrapDead div.body {
+    top: 120px;
+    left:65px;
+    height: 50px;
+    width:3px;
+  }
+  
+  div.gameSingle div.wrapDead div.leftHand {
+    top: 130px;
+    left:65px;
+    height: 30px;
+    width:3px;
+  }
+  
+  div.gameSingle div.wrapDead div.rightHand {
+    top: 130px;
+    left:65px;
+    height: 30px;
+    width:3px;
+  }
+  
+  div.gameSingle div.wrapDead div.leftLeg {
+    top: 168px;
+    left:65px;
+    height: 30px;
+    width:3px;
+  }
+  
+  div.gameSingle div.wrapDead div.rightLeg {
+    top: 168px;
+    left:65px;
+    height: 30px;
+    width:3px;
+  }
+
+  div.gameSingle div.wrapWord div.wrapLetter {
+    width: 15px;
+    margin-left: 10px;
+  }
+
+
+
+  div.gameSingle div.winScreen,
+div.gameSingle div.looseScreen {
+  width: 400px;
+  height: 200px;
+}
+
+  /* ----------------------------------------------------------------- */
+
+div.game div.wrapCategory{
+  width:300px;
+  height: 400px;
+}
+
+
+div.game div.wrapCategory button{
+  width:150px;
+  height: 60px;
+  margin-top: 40px;
+}
+
+div.game div.wrapWord div.wrapLetter {
+  width: 20px;
+  margin-left: 20px;
+}
+
+div.game div.wrapWord {
+  width: 400px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div.game div.wrapChars {
+  width: 200px;
+  height: 300px;
+  padding: 20px 20px;
+}
+
+div.game div.wrapChars div.wrapChar {
+  width: calc(100px / 8);
+  height: calc(200px / 8);
+  margin:3px;
+  padding: 10px;
+}
+
+div.game div.wrapDead {
+  width: 100px;
+  height: 250px;
+}
+
+div.game div.wrapDead img{
+  width:90px;
+  height: 240px;
+}
+
+div.game div.wrapDead div.head {
+  width:30px;
+  height: 30px;
+  top: 90px;
+  left: 52px;
+}
+
+div.game div.wrapDead div.body {
+  top: 120px;
+  left:65px;
+  height: 50px;
+  width:3px;
+}
+
+div.game div.wrapDead div.leftHand {
+  top: 130px;
+  left:65px;
+  height: 30px;
+  width:3px;
+}
+
+div.game div.wrapDead div.rightHand {
+  top: 130px;
+  left:65px;
+  height: 30px;
+  width:3px;
+}
+
+div.game div.wrapDead div.leftLeg {
+  top: 168px;
+  left:65px;
+  height: 30px;
+  width:3px;
+}
+
+div.game div.wrapDead div.rightLeg {
+  top: 168px;
+  left:65px;
+  height: 30px;
+  width:3px;
+}
+
+div.game div.winScreen,
+div.game div.looseScreen {
+width: 400px;
+height: 200px;
+}
+
+div.game div.rules {
+  width: 330px;
+  height: 300px;
+}
+
+div.game div.rules p.textRules {
+  margin-bottom: 25px;
+}
+
+
+div.game div.addWord {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.game div.addWord input {
+  width: 300px;
+  height: 60px;
+}
+
+}
+
+
+@media only screen and (max-height:500px){
+  html{
+    font-size: 7px;
+  }
+  body h1 {
+    margin: 10px auto 0 auto;
+    font-size: 4rem;
+    padding: 5px 15px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 300px;
+  }
+
+  
+  div.wrapMain div.single,
+  div.wrapMain div.multi {
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  div.wrapMain div.single p,
+  div.wrapMain div.multi p {
+    margin-bottom: 15px;
+  }
+  
+  div.wrapMain div.single button.onePerson,
+  div.wrapMain div.multi button.twoPeople {
+    padding: 8px 20px;
+  }
+  
+  /* ---------Image styles---------------- */
+  div.mainImg img {
+    width: 300px;
+    height: 400px;
+  }
+  
+  /* --------------main container to game------------- */
+  
+
+
+  div.game div.rules p.textRules {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+
+  
+  div.game div.wrapWord {
+    width: 500px;
+  }
+  
+  div.game div.wrapWord div.wrapLetter {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  div.game div.wrapWord div.wrapLetter span.letter {
+    font-size: 2rem;
+  }
+  
+  div.game div.wrapWord div.wrapLetter span.line {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+  }
+  
+  div.game div.wrapChars {
+    left: 25%;
+    transform: translate(-40%, -50%);
+    width: 300px;
+    height: 200px;
+    padding: 20px 20px;
+  }
+  
+  div.game div.wrapChars div.wrapChar {
+    width: calc(200px / 8);
+    height: calc(150px / 8);
+    margin: 5px;
+    padding: 15x;
+  }
+  
+  div.game div.winScreen,
+  div.game div.looseScreen {
+    width: 400px;
+    height: 200px;
+  }
+  
+  div.game img {
+    top: 2%;
+    right: 2%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  div.game div.wrapDead {
+    right: 5%;
+    width: 150px;
+    height: 200px;
+  }
+
+  div.game div.wrapDead img{
+    width: 140px;
+    height: 190px;
+  }
+  
+  div.game div.wrapDead div.head {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 70px;
+    left: 90px;
+  }
+  
+  div.game div.wrapDead div.body {
+    top: 90px;
+    left: 99px;
+    width: 2px;
+    height: 40px;
+  }
+  
+  div.game div.wrapDead div.leftHand {
+    top: 100px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  div.game div.wrapDead div.rightHand {
+    top: 100px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  div.game div.wrapDead div.leftLeg {
+    top: 130px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  div.game div.wrapDead div.rightLeg {
+    top: 130px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  
+  
+  /* ---------------SINGLE PLAYER-------------------- */
+
+  div.gameSingle div.wrapCategory{
+    width:400px;
+    height: 300px;
+  }
+  
+  
+  div.gameSingle div.wrapCategory button{
+    width:150px;
+    height: 50px;
+    margin-top: 20px;
+  }
+
+  div.gameSingle div.wrapWord {
+    width: 500px;
+  }
+  
+  div.gameSingle div.wrapWord div.wrapLetter {
+    width: 20px;
+    margin-left: 20px;
+  }
+
+  
+  div.gameSingle div.wrapWord div.wrapLetter span.line {
+    height: 2px;
+  }
+  
+  div.gameSingle div.wrapChars {
+    left: 25%;
+    width: 300px;
+    height: 200px;
+    padding: 20px 20px;
+  }
+  
+  div.gameSingle div.wrapChars div.wrapChar {
+    width: calc(200px / 8);
+    height: calc(150px / 8);
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  div.gameSingle div.winScreen,
+  div.gameSingle div.looseScreen {
+    width: 400px;
+    height: 200px;
+  }
+  
+  div.gameSingle img {
+    top: 2%;
+    right: 2%;
+    width: 30px;
+    height: 30px;
+  }
+  
+  div.gameSingle div.wrapDead {
+    right: 5%;
+    width: 150px;
+    height: 200px;
+  }
+
+  div.gameSingle div.wrapDead img{
+    width: 140px;
+    height: 190px;
+  }
+  
+  div.gameSingle div.wrapDead div.head {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 70px;
+    left: 90px;
+  }
+  
+  div.gameSingle div.wrapDead div.body {
+    top: 90px;
+    left: 99px;
+    width: 2px;
+    height: 40px;
+  }
+  
+  div.gameSingle div.wrapDead div.leftHand {
+    top: 100px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  div.gameSingle div.wrapDead div.rightHand {
+    top: 100px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  div.gameSingle div.wrapDead div.leftLeg {
+    top: 130px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+  
+  div.gameSingle div.wrapDead div.rightLeg {
+    top: 130px;
+    left: 99px;
+    width: 2px;
+    height: 30px;
+  }
+
+
+
+}
+
+
+@media only screen and (max-width:350px){
+  div.game div.addWord{
+    margin-top: 30px;
+  }
+  
+  
+
+  div.game div.wrapChars {
+    left: 25%;
+    transform: translate(-40%, -50%);
+    width: 180px;
+    height: 350px;
+    padding: 20px 20px;
+  }
+  
+  div.game div.wrapChars div.wrapChar {
+    width: calc(100px / 8);
+    height: calc(150px / 8);
+    margin: 5px;
+    padding: 10px;
+  }
+
+  div.gameSingle div.wrapChars {
+    left: 25%;
+    transform: translate(-40%, -50%);
+    width: 180px;
+    height: 350px;
+    padding: 20px 20px;
+  }
+  
+  div.gameSingle div.wrapChars div.wrapChar {
+    width: calc(100px / 8);
+    height: calc(150px / 8);
+    margin: 5px;
+    padding: 10px;
+  }
+}

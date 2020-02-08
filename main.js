@@ -260,13 +260,8 @@ const music = ['saksofon', 'trąbka', 'gama', 'klucz wiolinowy', 'intrumenty dę
 
 const sport = ['klub', 'drużyna', 'piłka nożna', 'piłka ręczna', 'koszykówka', 'siatkówka', 'pływanie', 'igrzyska olimpijskie', 'boisko', 'piłka', 'sędzia', 'curling', 'baseball', 'linie boczne', 'linia końcowa', 'mistrzostwa świata', 'mistrzowstwa europy', 'spalony', 'faul', 'trener', 'faul taktyczny', 'rozgrywający', 'atakujący', 'napastnik', 'obrońca', 'pomocnik', 'bramkarz', 'przyjmujący', 'libero', 'siłownia', 'przygotowanie fizyczne', 'wyścigi', 'formuła jeden', 'kierowca', 'rajd dakar', 'podium', 'medal', 'lekkoatletyka', 'wyścigi', 'skok o tyczce', 'skok w dal'];
 
-console.log(sport.length);
-
 
 const btnSingle = document.querySelector('.wrapMain .single button.onePerson');
-
-
-
 
 const gameSingle = () => {
 
@@ -329,7 +324,7 @@ const gameSingle = () => {
 
     divGameSingle.appendChild(imgExit);
 
-    const word = biology[Math.floor(Math.random() * biology.length - 1)];
+    const word = biology[Math.floor(Math.random() * biology.length)];
     wordArray = [...word];
     console.log(word);
 

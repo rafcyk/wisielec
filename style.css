@@ -849,6 +849,11 @@ div.gameSingle div.wrapDead div.rightLeg {
       height: 400px;
   }
 
+  div.gameSingle img{
+    width:30px;
+    height: 30px;
+  }
+
   div.gameSingle div.wrapCategory{
     width:300px;
     height: 400px;
@@ -947,17 +952,11 @@ div.gameSingle div.looseScreen {
 
   /* ----------------------------------------------------------------- */
 
-div.game div.wrapCategory{
-  width:300px;
-  height: 400px;
-}
 
-
-div.game div.wrapCategory button{
-  width:150px;
-  height: 60px;
-  margin-top: 40px;
-}
+  div.game img{
+    width:30px;
+    height: 30px;
+  }
 
 div.game div.wrapWord div.wrapLetter {
   width: 20px;
@@ -1076,19 +1075,24 @@ div.game div.addWord input {
     font-size: 7px;
   }
   body h1 {
-    margin: 10px auto 0 auto;
-    font-size: 4rem;
+    margin: 10px auto 40px auto;
     padding: 5px 15px;
-    background-color: #fff;
-    border: 2px solid black;
-    border-radius: 10px;
     width: 300px;
+  }
+
+  div.wrapMain{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    width: 400px;
+    height: 250px;
+    transform: translate(-50%, -50%);
   }
 
   
   div.wrapMain div.single,
   div.wrapMain div.multi {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding: 10px;
   }
   
@@ -1103,9 +1107,16 @@ div.game div.addWord input {
   }
   
   /* ---------Image styles---------------- */
+  div.mainImg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
   div.mainImg img {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 100vh;
   }
   
   /* --------------main container to game------------- */
@@ -1160,8 +1171,6 @@ div.game div.addWord input {
   }
   
   div.game img {
-    top: 2%;
-    right: 2%;
     width: 30px;
     height: 30px;
   }
